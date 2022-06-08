@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Raytracer Projekat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      #canvas-container {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        place-content: center;
+      }
+      #canvas {
+        display: block;
+        border: 2px solid darksalmon;
+      }
+      #console-content {
+        position: absolute;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: .5rem;
+      }
+      #console-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      button {
+        font-size: 0.8rem;
+        padding: 0.5rem .6rem;
+        border: 2px solid darksalmon;
+        border-radius: 0.25rem;
+        background-color: darksalmon;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="console">
+      <div id="console-content">
+        <div id="console-title">
+          Console
+        </div>
+          <select id="console-text-select-scene">
+            <option value="">Select a scene</option>
+            <option value="scene1">Scene 1 (All)</option>
+            <option value="scene2">Scene 2 (Refraction)</option>
+            <option value="scene3">Scene 3 (Cilindar)</option>
+          </select>
+        <button id="console-text-button">Render</button>
+    </div>
+    <div id="canvas-container">
+      <canvas width="800" height="800" id="canvas"></canvas>
+    </div>
+    <script src="HelperFunctions.js"></script>
+    <script src="GeometricObjects.js"></script>
+    <script src="Lights.js"></script>
+    <script src="Sampler.js"></script>
+    <script src="Scenes.js"></script>
+    <script src="raytracer.js"></script>
+  </body>
+</html>
